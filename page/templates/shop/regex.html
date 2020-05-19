@@ -1,0 +1,14 @@
+<img src="img/features/f-icon3.png" alt="">
+Find::img/(\w+/\w+)([-.]?)(\w+(.?)\w+)
+Replace::{% static 'img/$1$2$3' %}
+<img src="{% static 'img/features/f-icon3.png' %}" alt="">
+
+<img src="img/r6.jpg" alt="">
+find::img/(\w+).(\w+)
+Replace::{% static 'img/$1$2' %}
+<img src="{% static 'img/r6.jpg' %}" alt="">
+
+
+<!-- Common regex with little changes -->
+find::"js/((\w+)(./?)(\w+)(.?)\w+(.?)\w+.*js)
+replace::"{% static 'js/$1' %}
